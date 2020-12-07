@@ -73,6 +73,7 @@
     i {
         font-size: 40px;
         background-color: white;
+        color: #2a8000;
         border-radius: 50%;
         padding: 20px;
     }
@@ -92,17 +93,55 @@
         background-color: white;
         box-shadow: 10px 10px 5px #c3d6c8;
     }
+
+    #paragraph1, #paragraph2, #paragraph3, #paragraph4{
+        display: none;
+    }
 </style>
 
 <script>
-    $(document).ready(function(){
-      $("p").hover(function(){
-        $(this).css("background-color", "yellow");
-        }, function(){
-        $(this).css("background-color", "pink");
-      });
+    $(document).ready(function () {
+        $("#question1").click(function () {
+            $("#paragraph1").slideDown("slow");
+        }); 
+
+        $("#question1").dblclick(function () {
+            $("#paragraph1").slideUp("slow");
+        }); 
     });
-    </script>
+
+    $(document).ready(function () {
+        $("#question2").click(function () {
+            $("#paragraph2").slideDown("slow");
+        }); 
+
+        $("#question2").dblclick(function () {
+            $("#paragraph2").slideUp("slow");
+        }); 
+    });
+
+    $(document).ready(function () {
+        $("#question3").click(function () {
+            $("#paragraph3").slideDown("slow");
+        }); 
+
+        $("#question3").dblclick(function () {
+            $("#paragraph3").slideUp("slow");
+        }); 
+    });
+
+    $(document).ready(function () {
+        $("#question4").click(function () {
+            $("#paragraph4").slideDown("slow");
+        }); 
+
+        $("#question4").dblclick(function () {
+            $("#paragraph4").slideUp("slow");
+        }); 
+    });
+    
+</script>
+
 <body>
     <!-- coursel -->
     <section id="home">
@@ -188,38 +227,46 @@
             <br><br>
             <div class="row">
                 <div class="col-sm-3">
-                    <img src="img\tomatoes.png" alt="Tomatoes" style="width: 100%; height: 200px;" class="product" id="product1">
+                    <img src="img\tomatoes.png" alt="Tomatoes" style="width: 100%; height: 200px;" class="product"
+                        id="product1">
                     <h3>Tomatoes</h3>
                 </div>
                 <div class="col-sm-3">
-                    <img src="img\brocolli.png" alt="Brocolli" style="width: 100%; height: 200px;" class="product" id="product2">
+                    <img src="img\brocolli.png" alt="Brocolli" style="width: 100%; height: 200px;" class="product"
+                        id="product2">
                     <h3>Broccoli</h3>
                 </div>
                 <div class="col-sm-3">
-                    <img src="img\mushrooms.png" alt="Mushrooms" style="width: 100%; height: 200px;" class="product" id="product3">
+                    <img src="img\mushrooms.png" alt="Mushrooms" style="width: 100%; height: 200px;" class="product"
+                        id="product3">
                     <h3>Mushrooms</h3>
                 </div>
                 <div class="col-sm-3">
-                    <img src="img\ginger.png" alt="Ginger" style="width: 100%; height: 200px;" class="product" id="product4">
+                    <img src="img\ginger.png" alt="Ginger" style="width: 100%; height: 200px;" class="product"
+                        id="product4">
                     <h3>Ginger</h3>
                 </div>
                 <div class="col-sm-3">
-                    <img src="img\bananas.jpg" alt="Bananas" style="width: 100%; height: 200px;" class="product" id="product5">
+                    <img src="img\bananas.jpg" alt="Bananas" style="width: 100%; height: 200px;" class="product"
+                        id="product5">
                     <h3>Bananas</h3>
                 </div>
 
                 <div class="col-sm-3">
-                    <img src="img\garlic.png" alt="Garlic" style="width: 100%; height: 200px;" class="product" id="product6">
+                    <img src="img\garlic.png" alt="Garlic" style="width: 100%; height: 200px;" class="product"
+                        id="product6">
                     <h3>Garlic</h3>
                 </div>
 
                 <div class="col-sm-3">
-                    <img src="img\onions.cms" alt="Onions" style="width: 100%; height: 200px;" class="product" id="product7">
+                    <img src="img\onions.cms" alt="Onions" style="width: 100%; height: 200px;" class="product"
+                        id="product7">
                     <h3>Onions</h3>
                 </div>
 
                 <div class="col-sm-3">
-                    <img src="img\potatoes.png" alt="Potatoes" style="width: 100%; height: 200px;" class="product" id="product8">
+                    <img src="img\potatoes.png" alt="Potatoes" style="width: 100%; height: 200px;" class="product"
+                        id="product8">
                     <h3>Potatoes</h3>
                 </div>
 
@@ -235,11 +282,14 @@
                 <h1 class="text-center">Questions</h1>
                 <br>
                 <div>
+                    <div id="question1">
+                        <h4>What kind of soil do you use? <i class="fa fa-arrow-right"
+                                style="font-size: 8px; background-color: #2a8000; padding: 2%; float:right"></i></h4>
 
-                    <h4>What of soil do you use?</h4>
+                    </div>
                     <hr>
 
-                    <div class="p-3 mb-2 bg-light">
+                    <div class="p-3 mb-2 bg-light" id="paragraph1">
                         <p>
                             Fruits and vegetables get their nutrients from the soil - and that means a fruit or veggie
                             is only as nourishing as the soil in which it was grown.
@@ -249,11 +299,12 @@
 
                 </div>
 
-                <div>
-                    <h4>What variety of crops do you grow?</h4>
+                <div id="question2">
+                    <h4>What variety of crops do you grow? <i class="fa fa-arrow-right"
+                            style="font-size: 8px; background-color: #2a8000; padding: 2%; float:right"></i></h4>
                     <hr>
 
-                    <div class="p-3 mb-2 bg-light">
+                    <div class="p-3 mb-2 bg-light" id="paragraph2">
                         <p>
                             we highly value our soil, and support soil fertility, as different plants take certain
                             nutrients from the soil. Crop rotation allows our the soil to rest and replenish.
@@ -263,11 +314,12 @@
 
                 </div>
 
-                <div>
-                    <h4> Do you use GMO seeds?</h4>
+                <div id="question3">
+                    <h4> Do you use GMO seeds? <i class="fa fa-arrow-right"
+                            style="font-size: 8px; background-color: #2a8000; padding: 2%; float:right"></i></h4>
                     <hr>
 
-                    <div class="p-3 mb-2 bg-light">
+                    <div class="p-3 mb-2 bg-light" id="paragraph3">
                         <p>
                             Just as the soil is important, so are the types of seeds that we plant in the soil. We do
                             not use genetically modified seeds for the sake of our customer’s health and soil.
@@ -277,11 +329,12 @@
 
                 </div>
 
-                <div>
-                    <h4>What of soil do you use?</h4>
+                <div id="question4">
+                    <h4>What of soil do you use? <i class="fa fa-arrow-right"
+                            style="font-size: 8px; background-color: #2a8000; padding: 2%; float:right"></i></h4>
                     <hr>
 
-                    <div class="p-3 mb-2 bg-light">
+                    <div class="p-3 mb-2 bg-light" id="paragraph4">
                         <p>
                             Fruits and vegetables get their nutrients from the soil - and that means a fruit or veggie
                             is
@@ -308,7 +361,7 @@
     <div id="contact">
         <div class="container">
             <br><br>
-            <h2 class="text-center">Contact Details</h2>
+            <h1 class="text-center">Contact Details</h1>
             <div class="row">
                 <div class="col-sm-6" style="padding:3%">
                     <form action="" style="padding:10%">
@@ -330,7 +383,7 @@
                             <textarea type="text" class="form-control" name="message_body" id="message_body"
                                 placeholder="Your Message" required="" style="height:100px; "></textarea>
                         </div>
-                        <button class="btn btn-primary" type="submit" style="width: 100%" data-toggle="modal"
+                        <button class="btn" type="submit" style="width: 100%; background-color: #2a8000; color: aliceblue;" data-toggle="modal"
                             data-target="#messageReceived">Submit form</button>
 
                     </form>
@@ -392,7 +445,7 @@
     </div>
 
     <div class="footer">
-        <h4>© 2020 Copyright: Agridea <i class="fa fa-heart" style="font-size: 20px;
+        <h4 style="color: #2a8000;">© 2020 Copyright: Agridea <i class="fa fa-heart" style="font-size: 20px;
             "></i>
             by Yanjye</h4>
     </div>
