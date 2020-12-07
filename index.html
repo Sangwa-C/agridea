@@ -18,6 +18,14 @@
 </head>
 
 <style>
+    .product:hover {
+        -ms-transform: scale(0.9);
+        /* IE 9 */
+        -webkit-transform: scale(0.9);
+        /* Safari 3-8 */
+        transform: scale(0.9);
+    }
+
     .carousel-caption {
         /* margin-bottom: 7%; */
         background-color: black;
@@ -94,7 +102,10 @@
         box-shadow: 10px 10px 5px #c3d6c8;
     }
 
-    #paragraph1, #paragraph2, #paragraph3, #paragraph4{
+    #paragraph1,
+    #paragraph2,
+    #paragraph3,
+    #paragraph4 {
         display: none;
     }
 </style>
@@ -103,43 +114,42 @@
     $(document).ready(function () {
         $("#question1").click(function () {
             $("#paragraph1").slideDown("slow");
-        }); 
+        });
 
         $("#question1").dblclick(function () {
             $("#paragraph1").slideUp("slow");
-        }); 
+        });
     });
 
     $(document).ready(function () {
         $("#question2").click(function () {
             $("#paragraph2").slideDown("slow");
-        }); 
+        });
 
         $("#question2").dblclick(function () {
             $("#paragraph2").slideUp("slow");
-        }); 
+        });
     });
 
     $(document).ready(function () {
         $("#question3").click(function () {
             $("#paragraph3").slideDown("slow");
-        }); 
+        });
 
         $("#question3").dblclick(function () {
             $("#paragraph3").slideUp("slow");
-        }); 
+        });
     });
 
     $(document).ready(function () {
         $("#question4").click(function () {
             $("#paragraph4").slideDown("slow");
-        }); 
+        });
 
         $("#question4").dblclick(function () {
             $("#paragraph4").slideUp("slow");
-        }); 
+        });
     });
-    
 </script>
 
 <body>
@@ -383,7 +393,8 @@
                             <textarea type="text" class="form-control" name="message_body" id="message_body"
                                 placeholder="Your Message" required="" style="height:100px; "></textarea>
                         </div>
-                        <button class="btn" type="submit" style="width: 100%; background-color: #2a8000; color: aliceblue;" data-toggle="modal"
+                        <button class="btn" type="submit"
+                            style="width: 100%; background-color: #2a8000; color: aliceblue;" data-toggle="modal"
                             data-target="#messageReceived">Submit form</button>
 
                     </form>
